@@ -1,9 +1,8 @@
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<ExpenseTrackerContext>(options =>
-    options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"), 
-    new MySqlServerVersion(new Version(8, 0, 23))));  // Adjust MySQL version
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

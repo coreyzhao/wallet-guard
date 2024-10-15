@@ -11,5 +11,11 @@ namespace ExpenseTrackerAPI.Data
 
         public DbSet<Expense> Expenses { get; set; }
         public DbSet<Category> Categories { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            // Define model configurations if necessary
+        }
     }
 }
